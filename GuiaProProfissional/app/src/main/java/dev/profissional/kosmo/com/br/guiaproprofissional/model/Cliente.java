@@ -2,6 +2,8 @@ package dev.profissional.kosmo.com.br.guiaproprofissional.model;
 
 import android.graphics.Bitmap;
 
+import java.io.ByteArrayOutputStream;
+
 /**
  * Created by 0118431 on 19/04/2018.
  */
@@ -63,5 +65,11 @@ public class Cliente {
 
     public void setImg(Bitmap img) {
         this.img = img;
+    }
+
+    public byte[] imgBlob(){
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        img.compress(Bitmap.CompressFormat.PNG, 100, bos);
+        return bos.toByteArray();
     }
 }

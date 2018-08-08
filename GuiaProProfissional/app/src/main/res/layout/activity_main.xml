@@ -88,13 +88,16 @@
                 android:layout_marginTop="20dp">
 
                 <EditText
+                    android:id="@+id/edtLogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Email"/>
 
                 <EditText
+                    android:id="@+id/edtSenha"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="textPassword"
                     android:hint="Senha"
                     android:layout_marginTop="10dp"/>
 
@@ -112,14 +115,16 @@
                     android:layout_height="wrap_content"
                     android:text="Não possui uma conta?"
                     android:gravity="center"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"/>
                 <TextView
                     android:id="@+id/tvCadastre"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Cadastre-se!"
                     android:gravity="center"
-                    android:textColor="#FFDBAA32"/>
+                    android:textColor="#FFDBAA32"
+                    android:visibility="gone"/>
 
                 <TextView
                     android:id="@+id/tvSenha"
@@ -127,7 +132,8 @@
                     android:layout_height="wrap_content"
                     android:text="Esqueceu sua senha?"
                     android:gravity="center"
-                    android:textColor="#FFDBAA32"/>
+                    android:textColor="#FFDBAA32"
+                    android:visibility="gone"/>
 
             </LinearLayout>
         </LinearLayout>

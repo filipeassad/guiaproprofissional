@@ -6,7 +6,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import dev.profissional.kosmo.com.br.guiaproprofissional.R;
-import dev.profissional.kosmo.com.br.guiaproprofissional.fragments.NotificacaoFragment;
+import dev.profissional.kosmo.com.br.guiaproprofissional.fragments.DetalheAtendimentoFragment;
+import dev.profissional.kosmo.com.br.guiaproprofissional.fragments.TelaInicialFragment;
 
 
 /**
@@ -21,9 +22,12 @@ public class GerenciadorFragment {
 
         FragmentTransaction ft = fm.beginTransaction();
 
-        if(nomeTela.equals("Notificações")){
-            NotificacaoFragment notificacaoFragment = new NotificacaoFragment();
-            ft.replace(R.id.contFragments, notificacaoFragment, nomeTela);
+        if(nomeTela.equals("Telainicial")){
+            TelaInicialFragment telaInicialFragment = new TelaInicialFragment();
+            ft.replace(R.id.contFragments, telaInicialFragment, nomeTela);
+        }else if(nomeTela.equals("DetalheAtendimento")){
+            DetalheAtendimentoFragment detalheAtendimentoFragment = new DetalheAtendimentoFragment();
+            ft.replace(R.id.contFragments, detalheAtendimentoFragment, nomeTela);
         }else{
             return;
         }
